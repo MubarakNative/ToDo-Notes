@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--    <item android:id="@+id/opt_searchNote"-->
+<!--        android:title="Search"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:icon="@drawable/search_icon24px"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView" />-->
+
+    <item android:id="@+id/opt_viewMode"
+        android:title="View Mode"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/grid_view_icon24px" />
+
+
+
+</menu>

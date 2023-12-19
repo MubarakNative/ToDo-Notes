@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeNoteFragment">
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.UpdateFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_update">
+        <argument
+            android:name="currentItem"
+            app:argType="com.devplatform.mubarak.data.local.model.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.fragments.navigation.home.HomeNoteFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_note" >
+        <action
+            android:id="@+id/action_homeNoteFragment_to_createNoteFragment"
+            app:destination="@id/createNoteFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeNoteFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeNoteFragment_to_searchNoteFragment"
+            app:destination="@id/searchNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.fragments.createnote.CreateNoteFragment"
+        android:label="@string/create_note"
+        tools:layout="@layout/fragment_create_note" />
+    <fragment
+        android:id="@+id/labelNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.fragments.navigation.label.LabelNoteFragment"
+        android:label="Label Note"
+        tools:layout="@layout/fragment_label_note" />
+    <fragment
+        android:id="@+id/remainderNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.fragments.navigation.remainder.ReminderNoteFragment"
+        android:label="Remainder"
+        tools:layout="@layout/fragment_reminder_note" >
+        <action
+            android:id="@+id/action_remainderNoteFragment_to_createReminderNoteFragment"
+            app:destination="@id/createReminderNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.SearchNoteFragment"
+        android:label="fragment_search_note"
+        tools:layout="@layout/fragment_search_note" />
+    <fragment
+        android:id="@+id/createReminderNoteFragment"
+        android:name="com.devplatform.mubarak.presenter.ui.fragments.remindernote.CreateReminderNoteFragment"
+        android:label="CreateReminderNoteFragment" />
+</navigation>

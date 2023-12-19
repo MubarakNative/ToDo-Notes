@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeNoteFragment"
+            android:icon="@drawable/notes_icon"
+            android:title="@string/note" />
+
+        <item
+            android:id="@+id/remainderNoteFragment"
+            android:icon="@drawable/remainder_icon24px"
+            android:title="@string/reminder" />
+
+
+        <item
+            android:id="@+id/labelNoteFragment"
+            android:icon="@drawable/add_or_create_icon"
+            android:title="@string/label" />
+    </group>
+
+</menu>
